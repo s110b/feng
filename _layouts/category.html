@@ -1,0 +1,20 @@
+---
+layout: page
+---
+
+{% assign collection = site.collections | where: "label", page.collection | first %}
+<section id="photos">
+  {% for image in collection.files %}{% if image.path contains page.url %}
+  <a href="{{ page.url }}{{ image.name }}"><img src="{{ page.url }}{{ image.name }}"></a>
+  {% endif %}{% endfor %}
+</section>
+<!-- The Gallery as lightbox dialog, should be a child element of the document body -->
+<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
+    <div class="slides"></div>
+    <h3 class="title"></h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+</div>

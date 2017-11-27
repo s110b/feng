@@ -1,0 +1,4 @@
+{% for link in site.social-links %}{% if link[1] %}
+{% assign social = site.data.socials | where: "resource",link[0] | first %}
+<a href="{% if link[0] != 'rss' %}{{ social.url }}{{ link[1] }}{% else %}{{ site.baseurl }}/feed.xml{% endif %}"><i class="icon-{{ social.icon }} w3-hover-opacity"></i></a>
+{% endif %}{% endfor %}
