@@ -237,11 +237,10 @@ footer {
 input[type=text], input[type=email], textarea {
 	width: 100%;
 	box-sizing: border-box;
-	background: rgba(0, 0, 0, 0.9);
-	border: 1px solid rgba(255, 255, 255, 0.15);
+	border: 1px solid #ccc;
 	padding: 10px;
 	font-size: 16px;
-	color: #b5e853;
+	color: #de6551;
 	border-radius: 2px;
 	resize: none;
 	margin-bottom: 6px;
