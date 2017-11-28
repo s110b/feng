@@ -12,6 +12,16 @@
     {% feed_meta %}
     {% seo %}
   </head>
+  {% if site.google_analytics %}
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ site.google_analytics }}');
+  </script>
+  {% endif %}
 
   <body>
     <header role="banner">
@@ -27,28 +37,6 @@
       </main>
     </div>
     {% include footer.html %}
-
-    <script src="{{ 'assets/vendor/gallery/js/blueimp-gallery.min.js' | relative_url }}"></script>
-    <script>
-      document.getElementById('photos').onclick = function (event) {
-        event = event || window.event;
-        var target = event.target || event.srcElement,
-          link = target.src ? target.parentNode : target,
-          options = { index: link, event: event },
-          photos = this.getElementsByTagName('a');
-        blueimp.Gallery(photos, options);
-      };
-    </script>
     <script>document.addEventListener('contextmenu', event => event.preventDefault());</script>
-    {% if site.google_analytics %}
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', '{{ site.google_analytics }}');
-    </script>
-    {% endif %}
   </body>
 </html>

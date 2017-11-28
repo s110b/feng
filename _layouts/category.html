@@ -18,3 +18,14 @@ layout: page
     <a class="play-pause"></a>
     <ol class="indicator"></ol>
 </div>
+<script src="{{ 'assets/vendor/gallery/js/blueimp-gallery.min.js' | relative_url }}"></script>
+<script>
+  document.getElementById('photos').onclick = function (event) {
+    event = event || window.event;
+    var target = event.target || event.srcElement,
+      link = target.src ? target.parentNode : target,
+      options = { index: link, event: event },
+      photos = this.getElementsByTagName('a');
+    blueimp.Gallery(photos, options);
+  };
+</script>
