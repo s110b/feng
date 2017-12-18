@@ -6,7 +6,7 @@
 title: Photography Modern theme
 
 # Short bio or description (displayed in the header)
-description:
+description: Description
 slogan: Photography Modern is a theme for GitHub Pages
 
 author:
@@ -28,6 +28,7 @@ social-links:
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/
 
+index_title: Home
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account

@@ -207,6 +207,9 @@ a:hover + .card_content .card_caption {
 		-ms-transform: translateY(-100%);
 		transform: translateY(-100%);
 	}
+	.w3-bar-item {
+		float: none !important;
+	}
 }
 
 @media only screen and (max-width: 400px) {
