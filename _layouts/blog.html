@@ -2,6 +2,9 @@
 layout: default
 ---
 
+{% if site.blog_description %}
+{% include blog_description.html %}
+{% endif %}
 <div class="posts">
 {% for post in paginator.posts %}
   <article class="post">

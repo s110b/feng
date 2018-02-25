@@ -68,7 +68,7 @@ article img {
 
 /* cards wrapper */
 
-.cards, article.page, article.post {
+.cards, .page, .post, .blog_description {
 	border-style: hidden;
 	border-radius: 5px;
 	overflow: auto;
@@ -80,7 +80,7 @@ article img {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-article.page, article.post {
+.page, .post {
 	overflow: visible;
 	padding: 0.01em 2em 1.5em;
 }
@@ -92,6 +92,10 @@ article.page, article.post {
 .posts .post .w3-container {
 	padding-right: 2em;
 	padding-left: 2em;
+}
+
+.blog_description {
+	margin-bottom: 2em;
 }
 
 @media screen and (max-width: 50em) {
@@ -191,7 +195,7 @@ a:hover + .card_content .card_caption {
 }
 
 @media only screen and (max-width: 980px) {
-	.cards, article.page, article.post {
+	.cards, .page, .post {
 		width: 95%;
 	}
 	.card {
@@ -209,7 +213,7 @@ a:hover + .card_content .card_caption {
 }
 
 @media only screen and (max-width: 580px) {
-	.cards, article.page, article.post {
+	.cards, .page, .post {
 		width: 95%;
 	}
 	.card {
