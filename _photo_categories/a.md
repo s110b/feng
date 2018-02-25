@@ -1,6 +1,6 @@
 ---
 title: Example 1
 description: dfsdf
-cover:
+cover: false
 permalink: /:name/
 ---

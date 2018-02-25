@@ -1,6 +1,6 @@
 ---
 title: Example 2
 description: Desc 2
-cover:
+cover: false
 permalink: /:name/
 ---

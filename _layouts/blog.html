@@ -8,7 +8,7 @@ layout: default
 <div class="posts">
 {% for post in paginator.posts %}
   <article class="post">
-    <img src="https://www.w3schools.com/w3images/woods.jpg" alt="Norway" style="width:100%">
+    <img src="{{ site.baseurl }}{{ site.covers }}{{ post.title | slugify: 'pretty' }}.jpg" alt="Norway" style="width:100%">
     <div class="w3-container">
       <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
       <time class="w3-opacity" datetime="{{ page.date | date_to_xmlschema }}">
