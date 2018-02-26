@@ -205,7 +205,7 @@ a:hover + .card_content .card_caption {
 }
 
 @media only screen and (max-width: 980px) {
-	.cards, .page, .post {
+	.cards, .page, .post, .blog_description {
 		width: 95%;
 	}
 	.card {
@@ -223,7 +223,7 @@ a:hover + .card_content .card_caption {
 }
 
 @media only screen and (max-width: 580px) {
-	.cards, .page, .post {
+	.cards, .page, .post, .blog_description {
 		width: 95%;
 	}
 	.card {
