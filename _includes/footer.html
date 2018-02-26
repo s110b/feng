@@ -5,10 +5,9 @@
     <a href="{{ site.pgp-key.url }}">PGP:
     <code>{{ site.pgp-key.fingerprint }}</code></a>
   </p>{% endif %}
-  {% assign earliestPost = site.posts | last %}
+  {% assign earliestPost = site.posts | last %}{% assign earliestDate = earliestPost.date | date: "%Y" %}{% assign currentDate = site.time | date: "%Y" %}
   <span class="copyright">
-    &copy; {{ earliestPost.date | date: "%Y" }}
-    {% unless earliestPost.date | date: "%Y" == site.time | date: "%Y" %} – {{ site.time | date: "%Y" }}
-    {% endunless %} {{ site.author.name }}
+    &copy; {{ earliestDate }}
+    {% if earliestDate != currentDate %} – {{ currentDate }}{% endif %} {{ site.author.name }}
   </span>
 </footer>

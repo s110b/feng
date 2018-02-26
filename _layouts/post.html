@@ -14,13 +14,10 @@ layout: default
     {{ content }}
   </div>
 
-  <section id="photos">
   {% capture dir %}blog/{{ page.title | slugify: 'pretty' }}{% endcapture %}
-  {% for image in site.static_files %}
-    {% if image.path contains dir %}
-    <a href="{{ site.baseurl }}{{ image.path }}"><img src="{{ site.baseurl }}{{ image.path }}"></a>
-    {% endif %}
-  {% endfor %}
+  <section id="photos">
+  {% for image in site.static_files %}{% if image.path contains dir %}
+    <a href="{{ site.baseurl }}{{ image.path }}"><img src="{{ site.baseurl }}{{ image.path }}"></a>{% endif %}{% endfor %}
   </section>
   {% include gallery.html %}
 </article>
