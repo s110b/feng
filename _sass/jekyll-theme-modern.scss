@@ -101,7 +101,6 @@ article img {
 .post .cover {
 	border-style: hidden;
 	border-radius: 5px 5px 0px 0px;
-	height: 250px;
 	object-fit: cover;
 }
 
@@ -316,7 +315,10 @@ input[type=text], input[type=email], textarea {
 	column-gap:           0px;
  }
 
- .post #photos {
+.post #photos {
+	-webkit-column-count: 2;
+	-moz-column-count:    2;
+	column-count:         2;
 	margin-top: 2.0em;
  }
  
