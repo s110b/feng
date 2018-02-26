@@ -90,12 +90,19 @@ article img {
 }
 
 .posts .post .w3-container {
-	padding-right: 2em;
-	padding-left: 2em;
+	padding-right: 1.5em;
+	padding-left: 1.5em;
 }
 
 .blog_description {
-	margin-bottom: 2em;
+	margin-bottom: 3.5em;
+}
+
+.post .cover {
+	border-style: hidden;
+	border-radius: 5px 5px 0px 0px;
+	height: 250px;
+	object-fit: cover;
 }
 
 @media screen and (max-width: 50em) {
@@ -308,6 +315,10 @@ input[type=text], input[type=email], textarea {
 	column-count:         3;
 	column-gap:           0px;
  }
+
+ .post #photos {
+	margin-top: 2.0em;
+ }
  
  #photos img {
    /* Just in case there are inline attributes */
@@ -349,5 +360,5 @@ input[type=text], input[type=email], textarea {
 }
 
 .post .w3-container .w3-row {
-	margin-bottom: 30px;
+	margin-bottom: 1.5em;
 }

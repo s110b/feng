@@ -8,7 +8,7 @@ layout: default
 <div class="posts">
 {% for post in paginator.posts %}
   <article class="post">
-    <img src="{{ site.baseurl }}{{ site.covers }}{{ post.title | slugify: 'pretty' }}.jpg" alt="Norway" style="width:100%">
+    <img class="cover" src="{{ site.baseurl }}{{ site.covers }}{{ post.title | slugify: 'pretty' }}.jpg" style="width:100%">
     <div class="w3-container">
       <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
       <time class="w3-opacity" datetime="{{ page.date | date_to_xmlschema }}">
@@ -18,9 +18,7 @@ layout: default
       {{ post.excerpt }}
 
       <div class="w3-row">
-        {% if post.excerpt != post.content %}
-        <div class="w3-button w3-right w3-border"><a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a></div>
-        {% endif %}
+        <a href="{{ site.baseurl }}{{ post.url }}" class="read-more w3-button w3-right w3-border">Read More</a>
       </div>
     </div>
   </article>
