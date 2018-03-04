@@ -26,27 +26,11 @@ layout: default
 </div>
 
 {% if paginator.total_pages > 1 %}
-<div class="pagination">
+<div class="w3-container pagination">
 {% if paginator.previous_page %}
-  <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&lt;-- Previous</a>
-{% else %}
-  <span>&lt;-- Previous</span>
-{% endif %}
-
-{% for page in (1..paginator.total_pages) %}
-  {% if page == paginator.page %}
-    <em>{{ page }}</em>
-  {% elsif page == 1 %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
-  {% else %}
-    <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-  {% endif %}
-{% endfor %}
-
-{% if paginator.next_page %}
-  <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next --&gt;</a>
-{% else %}
-  <span>Next --&gt;</span>
+  <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="w3-btn w3-border w3-round w3-left">&laquo; Previous</a>
+{% endif %}{% if paginator.next_page %}
+  <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="w3-btn w3-border w3-round w3-right">Next &raquo;</a>
 {% endif %}
 </div>
 {% endif %}

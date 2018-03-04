@@ -80,6 +80,13 @@ article img {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.pagination {
+	width: 60%;
+	max-width: 820px;
+	margin: 3.5em auto 0;
+	padding: 0;
+}
+
 .page, .post {
 	overflow: visible;
 	padding: 0.01em 2em 1.5em;
@@ -205,7 +212,7 @@ a:hover + .card_content .card_caption {
 }
 
 @media only screen and (max-width: 980px) {
-	.cards, .page, .post, .blog_description {
+	.cards, .page, .post, .blog_description, .pagination {
 		width: 95%;
 	}
 	.card {
@@ -223,7 +230,7 @@ a:hover + .card_content .card_caption {
 }
 
 @media only screen and (max-width: 580px) {
-	.cards, .page, .post, .blog_description {
+	.cards, .page, .post, .blog_description, .pagination {
 		width: 95%;
 	}
 	.card {
