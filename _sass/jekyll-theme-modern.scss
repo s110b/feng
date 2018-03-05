@@ -314,7 +314,7 @@ input[type=text], input[type=email], textarea {
 
 /* Portfolio */
 
-#photos {
+#lightgallery {
 	/* Prevent vertical gaps */
 	line-height: 0;
 	
@@ -326,14 +326,14 @@ input[type=text], input[type=email], textarea {
 	column-gap:           0px;
  }
 
-.post #photos {
+.post #lightgallery {
 	-webkit-column-count: 2;
 	-moz-column-count:    2;
 	column-count:         2;
 	margin-top: 2.0em;
  }
  
- #photos img {
+ #lightgallery img {
    /* Just in case there are inline attributes */
    width: 100% !important;
    height: auto !important;
@@ -341,14 +341,14 @@ input[type=text], input[type=email], textarea {
  }
  
  @media (max-width: 980px) {
-   #photos {
+   #lightgallery {
    -moz-column-count:    3;
    -webkit-column-count: 3;
    column-count:         3;
    }
  }
  @media (max-width: 580px) {
-   #photos {
+   #lightgallery {
    -moz-column-count:    2;
    -webkit-column-count: 2;
    column-count:         2;
