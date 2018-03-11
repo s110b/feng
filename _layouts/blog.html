@@ -7,8 +7,8 @@ layout: default
 {% endif %}
 <div class="posts">
 {% for post in paginator.posts %}
-  <article class="post">
-    <img class="cover" src="{{ site.baseurl }}{{ site.covers }}{{ post.title | slugify: 'pretty' }}.jpg" style="width:100%">
+  <article class="post">{% assign slitted_path = post.path | split: "/" %}
+    <img class="cover" src="{{ site.baseurl }}{{ site.covers }}{{ slitted_path.last | remove: post.ext }}.jpg" style="width:100%">
     <div class="w3-container">
       <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
       <time class="w3-opacity" datetime="{{ page.date | date_to_xmlschema }}">

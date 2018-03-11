@@ -13,8 +13,8 @@ layout: default
   <div class="entry">
     {{ content }}
   </div>
-
-  {% capture dir %}blog/{{ page.title | slugify: 'pretty' }}{% endcapture %}
+  {% assign slitted_path = page.path | split: "/" %}
+  {% capture dir %}blog/{{ slitted_path.last | remove: page.ext }}{% endcapture %}
   <section id="photos">
   {% for image in site.static_files %}{% if image.path contains dir %}
     <a href="{{ site.baseurl }}{{ image.path }}"><img src="{{ site.baseurl }}{{ image.path }}"></a>{% endif %}{% endfor %}

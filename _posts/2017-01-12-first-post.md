@@ -1,5 +1,5 @@
 ---
-layput: post
+layout: post
 title: "First post"
 date: 2017-01-01 00:00 -05:00
 category: blog

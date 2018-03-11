@@ -12,6 +12,7 @@ slogan: Photography Modern is a theme for GitHub Pages
 blog_description: "Blog description."
 
 author:
+  name:
 
 covers: /assets/img/covers/
 
@@ -61,6 +62,8 @@ url:
 # then add in the baseurl here, like this: "/repository-name"
 baseurl: ""
 lang: en-US
+
+permalink: pretty
 
 collections:
   photo_categories:
