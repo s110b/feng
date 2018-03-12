@@ -285,7 +285,7 @@ footer {
 /* Feedback form
 */
 
-input[type=text], input[type=email], input[type=tel], textarea {
+input[type=text], input[type=email], input[type=tel], input[type=date], textarea {
 	width: 100%;
 	box-sizing: border-box;
 	border: 1px solid #ccc;
@@ -296,18 +296,22 @@ input[type=text], input[type=email], input[type=tel], textarea {
 	resize: none;
 	margin-bottom: 6px;
   }
-  
-  #contact {
+
+input[type=date] {
+	width: auto;
+}
+
+#contact {
 	overflow: hidden;
-  }
-  
-  #contact textarea {
+}
+
+#contact textarea {
 	height: 150px;
-  }
-  
-  #contact input.w3-right {
+}
+
+#contact input.w3-right {
 	clear: both;
-  }
+}
 
 /* Portfolio */
 
