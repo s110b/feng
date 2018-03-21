@@ -295,23 +295,37 @@ input[type=text], input[type=email], input[type=tel], input[type=date], textarea
 	border-radius: 2px;
 	resize: none;
 	margin-bottom: 6px;
-  }
+}
 
 input[type=date] {
 	width: auto;
 }
 
-#contact {
+input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus, input[type=date]:focus, textarea:focus {
+	border: 1px solid #cf8173;
+}
+  
+:not(output):-moz-ui-invalid {
+	border: 1px solid red;
+	border-radius: 2px;
+	box-shadow: none;
+}
+
+.contact-form {
 	overflow: hidden;
 }
 
-#contact textarea {
+.contact-form textarea {
 	height: 150px;
 }
 
-#contact input.w3-right {
+.contact-form input.w3-right {
 	clear: both;
 }
+
+#honeypot {
+	display: none; /*makes the field not visible to humans*/
+  }
 
 /* Portfolio */
 
