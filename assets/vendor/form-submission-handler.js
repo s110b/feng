@@ -2,11 +2,11 @@
   // get all data in form and return object
   function getFormData(form) {
     var elements = form.elements;
-    var honeypot;
+    var itsatrap;
 
     var fields = Object.keys(elements).filter(function(k) {
-      if (elements[k].name === "honeypot") {
-        honeypot = elements[k].value;
+      if (elements[k].name === "itsatrap") {
+        itsatrap = elements[k].value;
         return false;
       }
       return true;
@@ -47,7 +47,7 @@
     formData.formGoogleSendEmail
       = form.dataset.email || ""; // no email by default
 
-    return {data: formData, honeypot: honeypot};
+    return {data: formData, itsatrap: itsatrap};
   }
 
   function handleFormSubmit(event) {  // handles form submit without any jquery
@@ -56,8 +56,8 @@
     var formData = getFormData(form);
     var data = formData.data;
 
-    // If a honeypot field is filled, assume it was done so by a spam bot.
-    if (formData.honeypot) {
+    // If a itsatrap field is filled, assume it was done so by a spam bot.
+    if (formData.itsatrap || data.submit) {
       return false;
     }
 
