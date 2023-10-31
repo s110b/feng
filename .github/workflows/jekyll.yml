@@ -65,7 +65,7 @@ jobs:
             clean: true
             single-commit: true
             force: true
-            token: ${aden}  # Use the new token
+            token: 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  # Use the new token
           
 
       
