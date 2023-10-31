@@ -61,7 +61,7 @@ jobs:
             clean: true
             single-commit: true
             force: true
-            token: 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  # Use the new token
+            token: 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  # Use the new token
           
 
       
