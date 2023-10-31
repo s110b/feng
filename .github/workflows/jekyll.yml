@@ -71,8 +71,13 @@ jobs:
            name: site
            path: ./_site
            
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          path: ./_site
+            repository-name: "s110b/aden"
+            branch: aden
+            folder: public
+            clean: true
+            single-commit: true
+            force: true
+            token: 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  # Use the new token
