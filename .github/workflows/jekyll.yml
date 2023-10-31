@@ -65,7 +65,7 @@ jobs:
             clean: true
             single-commit: true
             force: true
-            token: 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  # Use the new token
+            token: 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  # Use the new token
           
 
       
