@@ -51,6 +51,10 @@ jobs:
         with:
           name: site
           path: ./_site
+      - name: Change ownership and permissions
+        run: |
+          sudo chown -R runner:runner /home/runner/work/feng/feng/_site
+          sudo chmod -R +rw /home/runner/work/feng/feng/_site
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
