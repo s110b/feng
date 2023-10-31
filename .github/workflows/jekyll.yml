@@ -51,33 +51,20 @@ jobs:
         with:
           name: site
           path: ./_site
-          
 
-      
-
-
-
-  # Deployment job
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: download site
-        uses: actions/download-artifact@v2
-        with:
-           name: site
-           path: ./_site
-           
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
             repository-name: "s110b/aden"
             branch: aden
-            folder: _site
+            folder: public
             clean: true
             single-commit: true
             force: true
             token: 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  # Use the new token
+          
+
+      
+
+
+ 
