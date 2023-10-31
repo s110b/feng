@@ -76,7 +76,7 @@ jobs:
         with:
             repository-name: "s110b/aden"
             branch: aden
-            folder: public
+            folder: _site
             clean: true
             single-commit: true
             force: true
