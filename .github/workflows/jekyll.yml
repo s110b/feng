@@ -59,13 +59,11 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-            repository-name: "s110b/aden"
             branch: aden
             folder: _site
             clean: true
             single-commit: true
             force: true
-            token: ${dmsongxiaofeng@juran.com.cn}  # Use the new token
           
 
       
