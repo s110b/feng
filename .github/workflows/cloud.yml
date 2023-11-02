@@ -24,7 +24,7 @@ jobs:
       - name: Publish
         uses: cloudflare/pages-action@1
         with:
-          apiToken: sgs661R3UiFDmpt3odP5kEO8HkTl4Io9NAJmjRyX
+          apiToken: UOBa9KDBk_7K34pOw2_GvLAPuAyB_R9XSEvBKbz0
           accountId: 80d039f72d9b6bbdb8076a69c9a9e164
           projectName: aden # e.g. 'my-project'
           directory: '.' # e.g. 'dist'
